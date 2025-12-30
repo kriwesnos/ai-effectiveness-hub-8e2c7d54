@@ -1,5 +1,4 @@
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import telegramBg from "@/assets/telegram-bg.png";
 
 const testimonials = [
   {
@@ -123,16 +122,21 @@ const TelegramMessage = ({ testimonial }: { testimonial: typeof testimonials[0] 
 const Testimonials = () => {
   return (
     <section className="relative py-24 overflow-hidden">
-      {/* Telegram-style wallpaper background */}
+      {/* Clean Telegram-style wallpaper background */}
       <div 
-        className="absolute inset-0 bg-cover bg-center"
+        className="absolute inset-0"
         style={{
-          backgroundImage: `url(${telegramBg})`,
+          background: "linear-gradient(180deg, #d4e7d6 0%, #c8deca 50%, #b8d4bb 100%)",
         }}
       />
       
-      {/* Subtle gradient overlay for depth */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/20" />
+      {/* Subtle pattern overlay */}
+      <div 
+        className="absolute inset-0 opacity-30"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M30,5 l2,5 5,0 -4,3 2,5 -5,-3 -5,3 2,-5 -4,-3 5,0z' fill='%2398c49d' opacity='0.4'/%3E%3Ccircle cx='10' cy='40' r='2' fill='%2398c49d' opacity='0.3'/%3E%3Ccircle cx='50' cy='45' r='1.5' fill='%2398c49d' opacity='0.3'/%3E%3C/svg%3E")`,
+        }}
+      />
 
       <div className="container relative z-10 mx-auto px-4">
         {/* Section Header */}
