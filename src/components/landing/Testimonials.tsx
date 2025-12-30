@@ -147,11 +147,11 @@ const Testimonials = () => {
         </div>
 
         {/* Grid of Messages */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-12">
           {testimonials.map((testimonial, index) => (
             <div 
               key={testimonial.id} 
-              className="flex justify-center"
+              className="flex justify-center pb-4"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <TelegramMessage testimonial={testimonial} />
